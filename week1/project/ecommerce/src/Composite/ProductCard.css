@@ -1,0 +1,30 @@
+.product-card {
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  color: #000;
+  font-size: 10px;
+}
+
+/* .product-card img {
+  max-height: 250px;
+  width: 100%;               
+  object-fit: contain;      
+  display: block;
+  margin: 0 auto;
+} */
+
+.product-image {
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.product-image img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
