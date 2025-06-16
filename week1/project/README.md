@@ -1,3 +1,9 @@
+Here is the link to the Production:
+https://ecommerce-starshynov.netlify.app/
+
+
+
+
 # Ecommerce Project I
 
 ## 1. Setup
