@@ -28,3 +28,22 @@
   max-width: 100%;
   object-fit: contain;
 }
+
+.product-card img {
+  width: 100%;
+  max-width: 200px; 
+  height: auto;
+  object-fit: contain;
+}
+
+.loading {
+  text-align: center;
+  margin: 2rem 0;
+  font-size: 1.2rem;
+}
+
+.error {
+  color: red;
+  text-align: center;
+  margin: 2rem 0;
+}
