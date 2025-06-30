@@ -1,0 +1,71 @@
+.product-card {
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  color: #000;
+  font-size: 10px;
+  position: relative; 
+}
+
+.product-image {
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  position: relative; 
+}
+
+.product-image img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.product-card img {
+  width: 100%;
+  max-width: 200px; 
+  height: auto;
+  object-fit: contain;
+}
+
+.favorite-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.favorite-btn svg {
+  width: 24px;
+  height: 24px;
+}
+
+.favorite-btn.favorited svg path {
+  fill: red;
+}
+
+.favorite-btn:not(.favorited) svg path {
+  fill: none;
+  stroke: red;
+  stroke-width: 2;
+}
+
+.loading {
+  text-align: center;
+  margin: 2rem 0;
+  font-size: 1.2rem;
+}
+
+.error {
+  color: red;
+  text-align: center;
+  margin: 2rem 0;
+}

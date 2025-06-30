@@ -1,0 +1,20 @@
+.category-button {
+  padding: 10px 16px;
+  margin: 4px;
+  border: 1px solid #ccc;
+  background-color: white !important;
+  color: #333;
+  border-radius: 6px !important;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.category-button:hover {
+  background-color: #f5f5f5;
+}
+
+.category-button.active {
+  background-color: #0077cc !important;
+  color: white;
+  border-color: #0077cc;
+}
