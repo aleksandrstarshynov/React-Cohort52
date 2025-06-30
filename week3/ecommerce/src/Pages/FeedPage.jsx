@@ -13,7 +13,6 @@ export default function FeedPage() {
   const [loadingProducts, setLoadingProducts] = useState(false);
   const [error, setError] = useState(null);
 
-  // Category loading
   useEffect(() => {
     fetchCategories()
       .then((cats) => {
@@ -24,7 +23,6 @@ export default function FeedPage() {
       .finally(() => setLoadingCategories(false));
   }, []);
 
-  // Loading products when changing filter
   useEffect(() => {
     setLoadingProducts(true);
     fetchProducts(selectedCategory)
@@ -42,13 +40,13 @@ export default function FeedPage() {
     return (
       <div className="loading-container">
         <div className="spinner" />
-        <p>Загрузка…</p>
+        <p>Loading…</p>
       </div>
     );
   }
 
   if (error) {
-    return <p className="error">Ошибка: {error}</p>;
+    return <p className="error">Error: {error}</p>;
   }
 
   return (

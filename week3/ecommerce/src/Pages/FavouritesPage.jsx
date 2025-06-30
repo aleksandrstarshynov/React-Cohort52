@@ -11,36 +11,35 @@ export default function FavouritesPage() {
     (id) => `https://fakestoreapi.com/products/${id}`
   );
 
-  const {
-    data: products,
-    loading,
-    error,
-    refetch,
-  } = useFetch(productUrls);
+  const { data, loading, error } = useFetch(productUrls);
 
-  const handleRefresh = () => refetch(productUrls);
+  const products = data
+    ? Array.isArray(data)
+      ? data
+      : [data]
+    : [];
 
   if (loading) {
     return (
       <div className="loading-container">
         <div className="spinner" />
-        <p>Загрузка избранного…</p>
+        <p>Loading favorites…</p>
       </div>
     );
   }
 
   if (error) {
-    return <p className="error">Ошибка: {String(error)}</p>;
+    return <p className="error">Error: {String(error)}</p>;
   }
 
   if (!favorites.length) {
-    return <p>У вас нет избранных товаров.</p>;
+    return <p>You have no favorite products.</p>;
   }
 
   return (
     <div className="favourites-page">
       <h1>Favourites</h1>
-      <ProductList products={products || []} />
+      <ProductList products={products} />
     </div>
   );
 }

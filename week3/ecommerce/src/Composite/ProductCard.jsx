@@ -9,7 +9,7 @@ export default function ProductCard({ product }) {
   const isFav = favorites.includes(product.id);
 
   const toggleFavorite = (e) => {
-    e.preventDefault(); // чтобы не сломать переход по Link
+    e.preventDefault(); 
     e.stopPropagation();
     if (isFav) {
       removeFavorite(product.id);

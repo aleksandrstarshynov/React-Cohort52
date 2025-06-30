@@ -23,17 +23,17 @@ export default function ProductDetail() {
     return (
       <div className="loading-container">
         <div className="spinner" />
-        <p>Загрузка…</p>
+        <p>Loading…</p>
       </div>
     );
   }
 
   if (error) {
-    return <p className="error">Ошибка: {String(error)}</p>;
+    return <p className="error">Error: {String(error)}</p>;
   }
 
   if (!product) {
-    return <p className="error">Продукт не найден</p>;
+    return <p className="error">Product not found</p>;
   }
 
   return (
@@ -64,9 +64,9 @@ export default function ProductDetail() {
         </button>
       </div>
       <h1>{product.title}</h1>
-      <p><strong>Категория:</strong> {product.category}</p>
-      <p><strong>Цена:</strong> {product.price} €</p>
-      <p><strong>Описание:</strong> {product.description}</p>
+      <p><strong>Category:</strong> {product.category}</p>
+      <p><strong>Price:</strong> {product.price} €</p>
+      <p><strong>Description:</strong> {product.description}</p>
     </div>
   );
 }
